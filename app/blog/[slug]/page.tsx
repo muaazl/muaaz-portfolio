@@ -1,7 +1,7 @@
 import connectDB from "@/lib/db";
 import Post from "@/lib/models/post";
 import ReactMarkdown from "react-markdown";
-import { ArrowLeft } from "lucide-react";
+import { FaArrowLeft } from "react-icons/fa";
 import Link from "next/link";
 
 export default async function BlogPost(props: { params: Promise<{ slug: string }> | { slug: string } }) {
@@ -14,7 +14,7 @@ export default async function BlogPost(props: { params: Promise<{ slug: string }
   return (
     <main className="min-h-screen pt-32 pb-16 px-8 max-w-3xl mx-auto">
       <Link href="/blog" className="inline-flex items-center text-muted hover:text-white mb-8 group">
-        <ArrowLeft className="mr-2 w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+        <FaArrowLeft className="mr-2 w-4 h-4 group-hover:-translate-x-1 transition-transform" />
         Return to Buffer
       </Link>
       
