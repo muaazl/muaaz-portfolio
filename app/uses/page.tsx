@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Uses | Muaaz Lattif",
-  description: "Hardware, software, and dream configurations.",
+  title: "Uses",
 };
 
 export default function UsesPage() {
@@ -16,8 +15,6 @@ export default function UsesPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        
-        {/* Hardware */}
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-accent-1 border-b border-white/10 pb-2">Battle Station</h2>
           <ul className="space-y-4">
@@ -28,8 +25,6 @@ export default function UsesPage() {
             <ListItem title="Audio" desc="Sony WH-1000XM5" />
           </ul>
         </div>
-
-        {/* Software */}
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-accent-1 border-b border-white/10 pb-2">Command Center</h2>
           <ul className="space-y-4">
@@ -40,8 +35,6 @@ export default function UsesPage() {
             <ListItem title="Design" desc="Figma" />
           </ul>
         </div>
-
-        {/* The Vision */}
         <div className="md:col-span-2 mt-8 p-8 rounded-2xl bg-surface/30 border border-dashed border-white/20">
           <h2 className="text-2xl font-bold text-white mb-4">The Dream Setup (Vision 2026)</h2>
           <p className="text-muted-foreground mb-6">
@@ -63,7 +56,6 @@ export default function UsesPage() {
              </div>
           </div>
         </div>
-
       </div>
     </main>
   );

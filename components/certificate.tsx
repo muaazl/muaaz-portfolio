@@ -9,16 +9,13 @@ export default function Certificate() {
         orientation: "landscape",
     });
 
-    // Background Black
-    doc.setFillColor(11, 15, 19); // Your Hex #0b0f13
+    doc.setFillColor(11, 15, 19);
     doc.rect(0, 0, 300, 210, "F");
 
-    // Border Cyan
     doc.setLineWidth(2);
-    doc.setDrawColor(0, 225, 255); // Cyan
+    doc.setDrawColor(0, 225, 255);
     doc.rect(10, 10, 277, 190);
 
-    // Text White
     doc.setTextColor(255, 255, 255);
     doc.setFont("courier", "bold");
     
@@ -30,7 +27,7 @@ export default function Certificate() {
     doc.text("This certifies that", 148, 70, { align: "center" });
 
     doc.setFontSize(30);
-    doc.setTextColor(0, 225, 255); // Cyan Name
+    doc.setTextColor(0, 225, 255);
     doc.text("ANONYMOUS USER", 148, 90, { align: "center" });
 
     doc.setTextColor(255, 255, 255);

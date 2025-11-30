@@ -8,7 +8,7 @@ interface GuestbookEntry {
   _id: string;
   name: string;
   message: string;
-  createdAt: string; // ISO date string
+  createdAt: string;
 }
 
 export default function GuestbookPage() {
@@ -40,7 +40,6 @@ export default function GuestbookPage() {
     <main className="min-h-screen pt-32 pb-16 px-8 max-w-2xl mx-auto">
       <h1 className="text-4xl font-bold text-white mb-8">Guestbook</h1>
       <p className="text-muted mb-8">Leave a mark on the database. Permanent record.</p>
-      
       <form onSubmit={submit} className="mb-12 flex flex-col gap-4 p-6 bg-surface/30 rounded-xl border border-white/10">
         <Input 
             placeholder="Your Name / Handle" 
@@ -58,7 +57,6 @@ export default function GuestbookPage() {
             Sign Database
         </Button>
       </form>
-
       <div className="space-y-4 mb-16">
         {entries.map((entry) => (
           <div key={entry._id} className="p-4 border-l-2 border-white/10 hover:border-accent-1 transition-colors pl-4 bg-surface/10 rounded-r-lg">
@@ -70,7 +68,6 @@ export default function GuestbookPage() {
           </div>
         ))}
       </div>
-
       <div className="border-t border-white/10 pt-16">
         <Certificate />
       </div>

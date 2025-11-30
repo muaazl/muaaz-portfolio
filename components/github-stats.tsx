@@ -17,7 +17,6 @@ export default function GitHubStats() {
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
       <StatBox icon={<FaCode />} label="Repositories" value={stats.public_repos} />
       <StatBox icon={<FaStar />} label="Followers" value={stats.followers} />
-      {/* Static numbers for "flavor" if you don't have WakaTime API set up yet */}
       <StatBox icon={<FiGitCommit />} label="Commits (2025)" value="450+" />
       <StatBox icon={<FaCode />} label="Hours Coded" value="1,200+" />
     </div>

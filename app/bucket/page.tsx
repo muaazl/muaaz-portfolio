@@ -1,6 +1,11 @@
 import BucketList from "@/components/bucket-list"; // The wrapper we just made
 import connectDB from "@/lib/db";
 import Bucket from "@/lib/models/bucket";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bucket",
+};
 
 export const dynamic = 'force-dynamic';
 

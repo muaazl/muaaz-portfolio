@@ -12,14 +12,12 @@ export function useManualChat() {
     e.preventDefault();
     if (!input.trim()) return;
 
-    // 1. Add User Message
     const userMsg = { role: "user", content: input, id: Date.now().toString() };
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
     setIsLoading(true);
 
     try {
-      // 2. Fetch from API
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -28,11 +26,9 @@ export function useManualChat() {
 
       if (!response.body) return;
 
-      // 3. Prepare Bot Message container
       const botMsgId = (Date.now() + 1).toString();
       setMessages((prev) => [...prev, { role: "assistant", content: "", id: botMsgId }]);
 
-      // 4. Read the Stream
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let done = false;
@@ -42,7 +38,6 @@ export function useManualChat() {
         done = doneReading;
         const chunkValue = decoder.decode(value, { stream: true });
 
-        // Update the last message (bot) with new chunk
         setMessages((prev) =>
           prev.map((msg) =>
             msg.id === botMsgId

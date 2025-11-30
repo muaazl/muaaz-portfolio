@@ -7,8 +7,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
-  --color-accent-1: #00e1ff; /* Electric Cyan */
-  --color-accent-2: #3aa0ff; /* Royal Blue */
+  --color-accent-1: #00e1ff;
+  --color-accent-2: #3aa0ff;
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -24,51 +24,37 @@
 }
 
 :root {
-  /* --- BASELINE DARK THEME --- */
-  --background: #0b0f13;  /* Deepest Black/Blue */
-  --foreground: #ffffff;  /* Pure White */
+  --background: #0b0f13;
+  --foreground: #ffffff;
 
-  /* Surface Colors */
   --card: #12171d;
   --card-foreground: #ffffff;
   --popover: #12171d;
   --popover-foreground: #ffffff;
 
-  /* Primary Brand (Cyan) */
   --primary: #00e1ff;
   --primary-foreground: #000000;
 
-  /* Secondary Surface (Dark Blue-Gray) */
   --secondary: #1e293b;
   --secondary-foreground: #ffffff;
 
-  /* Muted (For backgrounds) vs Muted Foreground (For text) */
   --muted: #1e293b;
-  --muted-foreground: #94a3b8; /* Readable Silver */
+  --muted-foreground: #94a3b8;
 
-  /* Accents */
   --accent: #00e1ff;
   --accent-foreground: #000000;
 
-  /* Borders & Inputs */
   --border: #272e3b;
   --input: #272e3b;
   --ring: #00e1ff;
 
-  /* Destructive */
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
 
-  /* Sidebar/Charts Defaults */
   --sidebar: #12171d;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #00e1ff;
   --sidebar-accent: #1e293b;
-}
-
-/* Force Dark Mode on everything */
-.dark {
-  /* Inherits :root */
 }
 
 @layer base {

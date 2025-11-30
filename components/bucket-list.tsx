@@ -1,4 +1,3 @@
-// components/BucketList.tsx
 "use client";
 import BucketItem from "./bucket-item";
 

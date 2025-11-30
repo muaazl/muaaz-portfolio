@@ -21,7 +21,6 @@ export default async function Image() {
           color: 'white',
         }}
       >
-        {/* Background Accent */}
         <div
           style={{
             position: 'absolute',
@@ -32,7 +31,6 @@ export default async function Image() {
             background: 'radial-gradient(circle at center, rgba(58, 160, 255, 0.2), transparent 80%)',
           }}
         />
-        
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 10 }}>
           <div style={{ fontSize: 70, fontWeight: 'bold', letterSpacing: '-0.05em', color: 'white' }}>
             MUAAZ LATTIFF

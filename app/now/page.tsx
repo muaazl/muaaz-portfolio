@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Now | Muaaz Lattif",
+  title: "Now",
 };
 
 export default function NowPage() {

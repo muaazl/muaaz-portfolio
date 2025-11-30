@@ -3,6 +3,11 @@ import Post from "@/lib/models/post";
 import ReactMarkdown from "react-markdown";
 import { FaArrowLeft } from "react-icons/fa";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+};
 
 export default async function BlogPost(props: { params: Promise<{ slug: string }> | { slug: string } }) {
   const params = await props.params;

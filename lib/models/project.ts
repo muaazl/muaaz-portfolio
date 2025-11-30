@@ -10,7 +10,7 @@ const ProjectSchema = new Schema({
   liveUrl: { type: String },
   repoUrl: { type: String },
   featured: { type: Boolean, default: false },
-  likes: { type: Number, default: 0 }, // <--- MAKE SURE THIS IS HERE
+  likes: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now },
 });
 

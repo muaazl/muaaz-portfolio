@@ -2,20 +2,16 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useMode } from "@/hooks/use-mode";
 import { useKonami } from "@/hooks/use-konami";
-import { cn } from "@/lib/utils"; // shadcn helper
+import { cn } from "@/lib/utils";
 
 export default function Cursor() {
-  const { mode } = useMode();
   const [isVisible, setIsVisible] = useState(false);
   useKonami();
   
-  // Motion values for smooth physics
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  // Smooth delay (Lag effect)
   const springConfig = { damping: 20, stiffness: 400, mass: 0.5 };
   const cursorX = useSpring(mouseX, springConfig);
   const cursorY = useSpring(mouseY, springConfig);
@@ -78,10 +74,7 @@ export default function Cursor() {
           translateY: "-50%",
         }}
       >
-        {/* Muaaz Mode: Simple Glow Dot */}
-        {mode === "super" && (
-          <div className="h-4 w-4 bg-white rounded-full shadow-[0_0_10px_2px_rgba(255,255,255,0.8)]" />
-        )}
+        <div className="h-4 w-4 bg-white rounded-full shadow-[0_0_10px_2px_rgba(255,255,255,0.8)]" />
       </motion.div>
     </>
   );

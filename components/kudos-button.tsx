@@ -9,13 +9,11 @@ export default function KudosButton({ slug, initialLikes }: { slug: string, init
   const [isLiked, setIsLiked] = useState(false);
 
   const handleLike = async () => {
-    if (isLiked) return; // Prevent double spamming locally if you want
+    if (isLiked) return;
 
-    // 1. Optimistic Update
     setLikes(prev => prev + 1);
     setIsLiked(true);
 
-    // 2. Confetti
     const rect = document.getElementById("kudos-btn")?.getBoundingClientRect();
     const originX = rect ? (rect.left + rect.width / 2) / window.innerWidth : 0.5;
     const originY = rect ? (rect.top + rect.height / 2) / window.innerHeight : 0.5;
@@ -27,7 +25,6 @@ export default function KudosButton({ slug, initialLikes }: { slug: string, init
       colors: ['#00e1ff', '#ffffff']
     });
 
-    // 3. API Call
     try {
       const res = await fetch("/api/kudos", {
         method: "PATCH",
@@ -38,13 +35,9 @@ export default function KudosButton({ slug, initialLikes }: { slug: string, init
       if (!res.ok) {
         throw new Error("Failed");
       }
-      
-      // Optional: Sync with server value just in case
-      // const data = await res.json();
-      // setLikes(data.likes);
     } catch (e) {
       console.error("Like failed", e);
-      setLikes(prev => prev - 1); // Revert on error
+      setLikes(prev => prev - 1);
       setIsLiked(false);
     }
   };

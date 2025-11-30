@@ -2,20 +2,17 @@
 import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { TorusKnot, Sparkles, Float } from "@react-three/drei";
-import { useMode } from "@/hooks/use-mode";
 import * as THREE from "three";
 
 function AnimatedMesh() {
   const meshRef = useRef<THREE.Mesh>(null!);
   
   useFrame((state, delta) => {
-    // Rotation logic
     const speed = 1.5;
     meshRef.current.rotation.x += delta * speed * 0.2;
     meshRef.current.rotation.y += delta * speed * 0.4;
   });
 
-// Change the color logic:
   const color = "#00e1ff";
   const emissive = "#2563eb";
   const emissiveIntensity = 2;
@@ -38,7 +35,6 @@ function AnimatedMesh() {
 }
 
 export default function Avatar3D() {
-  const { mode } = useMode();
 
   return (
     <div className="h-[400px] w-full relative z-10">

@@ -1,4 +1,3 @@
-// hooks/use-sound-effects.ts
 "use client";
 
 import { Howl } from "howler";
@@ -15,7 +14,6 @@ export const useSoundEffects = () => {
   });
 
   useEffect(() => {
-    // Initialize sounds
     sounds.current.toggle = new Howl({ src: ["/sounds/toggle.mp3"], volume: 0.1 });
     sounds.current.hover = new Howl({ src: ["/sounds/hover.mp3"], volume: 0.05 });
     sounds.current.achievement = new Howl({ src: ["/sounds/achievement.mp3"], volume: 0.2 });
@@ -24,7 +22,6 @@ export const useSoundEffects = () => {
     const currentSounds = sounds.current;
 
     return () => {
-      // Cleanup
       Object.values(currentSounds).forEach((sound) => sound?.unload());
     };
   }, []);

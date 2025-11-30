@@ -1,4 +1,9 @@
 import { Badge } from "@/components/ui/badge";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Changelog",
+};
 
 const changes = [
   {

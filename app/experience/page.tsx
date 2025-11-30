@@ -1,6 +1,11 @@
 import connectDB from "@/lib/db";
 import Experience from "@/lib/models/experience";
 import { Badge } from "@/components/ui/badge";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Experience",
+};
 
 export const dynamic = 'force-dynamic';
 

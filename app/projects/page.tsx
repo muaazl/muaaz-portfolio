@@ -4,15 +4,13 @@ import Project from "@/lib/models/project";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects | Muaaz Lattif",
+  title: "Projects",
 };
 
-// Disable caching so new projects appear instantly
 export const dynamic = 'force-dynamic';
 
 export default async function ProjectsPage() {
   await connectDB();
-  // Fetch from Mongo
   const projects = await Project.find({}).sort({ createdAt: -1 });
 
   return (

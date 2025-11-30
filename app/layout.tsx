@@ -8,17 +8,16 @@ import ConsoleOverlay from "@/components/console-overlay";
 import CircuitBackground from "@/components/circuit-background";
 import Navbar from "@/components/navbar";
 import { CommandMenu } from "@/components/command-menu";
-import SpotifyFooter from "@/components/spotify-footer"; // If you haven't made this yet, comment it out
+import SpotifyFooter from "@/components/spotify-footer";
 import SiteFooter from "@/components/site-footer";
 
-// 1. Configure Fonts
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://muaaz-portfolio.vercel.app'),
+  metadataBase: new URL('https://muaazl.vercel.app/'),
   title: {
-    default: "Muaaz Lattif | Creative Developer",
+    default: "Muaaz Lattif | Developer",
     template: "%s | Muaaz Lattif"
   },
   description: "A developer who stays quiet until it's time to activate. Specialized in Next.js, 3D Web, and High-Performance UI.",

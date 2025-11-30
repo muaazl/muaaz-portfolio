@@ -7,7 +7,7 @@ const BucketSchema = new Schema({
     enum: ["not-started", "in-progress", "done"], 
     default: "not-started" 
   },
-  category: { type: String }, // e.g., "Life", "Dev", "Fitness"
+  category: { type: String },
 });
 
 export default models.Bucket || model("Bucket", BucketSchema);

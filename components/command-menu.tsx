@@ -3,7 +3,7 @@
 import * as React from "react";
 import { Command } from "cmdk";
 import { useRouter } from "next/navigation";
-import { useCommandMenu } from "@/hooks/use-command-menu"; // Import hook
+import { useCommandMenu } from "@/hooks/use-command-menu";
 import { FaCode, FaLaptop, FaUser, FaGamepad, FaTerminal, FaHistory, FaCoffee, FaWrench } from "react-icons/fa";
 import { FiFileText, FiZap } from "react-icons/fi";
 
@@ -41,23 +41,19 @@ export function CommandMenu() {
                 className="w-full bg-transparent outline-none text-white placeholder:text-muted-foreground"
             />
         </div>
-        
         <Command.List className="p-2 max-h-[60vh] overflow-y-auto">
           <Command.Empty className="p-4 text-center text-muted-foreground">No results found.</Command.Empty>
-
           <Command.Group heading="Main" className="text-xs text-muted-foreground px-2 py-1 mb-2">
             <Item icon={<FaUser />} onSelect={() => run(() => router.push("/about"))}>About</Item>
             <Item icon={<FaCode />} onSelect={() => run(() => router.push("/projects"))}>Projects</Item>
             <Item icon={<FaHistory />} onSelect={() => run(() => router.push("/experience"))}>Experience</Item>
             <Item icon={<FiFileText />} onSelect={() => run(() => router.push("/blog"))}>Blog</Item>
           </Command.Group>
-
           <Command.Group heading="Playground" className="text-xs text-muted-foreground px-2 py-1 mb-2">
             <Item icon={<FaGamepad />} onSelect={() => run(() => router.push("/game"))}>Speed Coder</Item>
             <Item icon={<FaTerminal />} onSelect={() => run(() => router.push("/playground"))}>Physics Sandbox</Item>
             <Item icon={<FaWrench />} onSelect={() => run(() => router.push("/uses"))}>/uses (Gear)</Item>
           </Command.Group>
-
           <Command.Group heading="System" className="text-xs text-muted-foreground px-2 py-1 mb-2">
             <Item icon={<FiZap />} onSelect={() => run(() => router.push("/now"))}>/now</Item>
             <Item icon={<FaCode />} onSelect={() => run(() => router.push("/snippets"))}>Code Snippets</Item>

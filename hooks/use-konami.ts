@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useMode } from "@/hooks/use-mode";
 import { useSoundEffects } from "@/hooks/use-sound-effects";
 
 const KONAMI_CODE = [
@@ -11,7 +10,6 @@ const KONAMI_CODE = [
 
 export function useKonami() {
   const [input, setInput] = useState<string[]>([]);
-  const { toggleMode, mode } = useMode();
   const { play } = useSoundEffects();
 
   useEffect(() => {
@@ -23,15 +21,12 @@ export function useKonami() {
       setInput(newInput);
 
       if (newInput.join("") === KONAMI_CODE.join("")) {
-        if (mode === 'muaaz') {
-          play("achievement");
-          toggleMode(); // ACTIVATE SUPER MODE
-        }
+        play("achievement");
         setInput([]);
       }
     };
 
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [input, toggleMode, mode, play]);
+  }, [input, play]);
 }

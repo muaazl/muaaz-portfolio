@@ -2,6 +2,11 @@ import Link from "next/link";
 import connectDB from "@/lib/db";
 import Post from "@/lib/models/post";
 import { Badge } from "@/components/ui/badge";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+};
 
 export const dynamic = 'force-dynamic';
 

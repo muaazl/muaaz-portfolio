@@ -11,7 +11,6 @@ export default function SiteFooter() {
           <Link href="/projects" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Projects</Link>
           <Link href="/contact" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Contact</Link>
         </div>
-        
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-white">Resources</h4>
           <Link href="/uses" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">/uses</Link>
@@ -19,19 +18,17 @@ export default function SiteFooter() {
           <Link href="/guestbook" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Guestbook</Link>
           <Link href="/now" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">/now</Link>
         </div>
-
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-white">Playground</h4>
           <Link href="/game" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Speed Coder</Link>
           <Link href="/playground" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Physics</Link>
         </div>
-
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-white">System</h4>
           <Link href="/changelog" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Changelog</Link>
           <Link href="/admin" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Admin</Link>
           <span className="text-xs text-muted-foreground mt-4">
-            © 2025 Muaaz Lattif.<br />Built with Next.js 14.
+            © 2025 Muaaz Lattif.
           </span>
         </div>
       </div>
