@@ -14,23 +14,19 @@ export default function SiteFooter() {
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-white">Resources</h4>
           <Link href="/uses" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">/uses</Link>
-          <Link href="/snippets" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Snippets</Link>
-          <Link href="/guestbook" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Guestbook</Link>
-          <Link href="/now" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">/now</Link>
         </div>
         <div className="flex flex-col gap-4">
-          <h4 className="font-bold text-white">Playground</h4>
-          <Link href="/game" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Speed Coder</Link>
-          <Link href="/playground" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Physics</Link>
+          <h4 className="font-bold text-white">More</h4>
         </div>
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-white">System</h4>
-          <Link href="/changelog" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Changelog</Link>
           <Link href="/admin" className="text-sm text-muted-foreground hover:text-accent-1 transition-colors">Admin</Link>
-          <span className="text-xs text-muted-foreground mt-4">
-            © 2025 Muaaz Lattif.
-          </span>
         </div>
+      </div>
+      <div className="max-w-6xl mx-auto border-t border-white/5 pt-8">
+        <span className="text-xs text-muted-foreground">
+          © 2025 Muaaz Lattif.
+        </span>
       </div>
     </footer>
   );

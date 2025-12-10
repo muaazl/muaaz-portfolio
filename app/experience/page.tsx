@@ -19,7 +19,6 @@ export default async function ExperiencePage() {
       <div className="relative border-l border-white/10 ml-3 md:ml-6 space-y-12">
         {jobs.map((job) => (
           <div key={job._id} className="relative pl-8 md:pl-12 group">
-            {/* Dot */}
             <div className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-accent-1 ring-4 ring-background group-hover:bg-white transition-colors" />
             
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">

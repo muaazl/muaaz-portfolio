@@ -5,25 +5,19 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useCommandMenu } from "@/hooks/use-command-menu";
-import { useKonami } from "@/hooks/use-konami";
 import { FaSearch } from "react-icons/fa";
 
 const navItems = [
   { name: "Home", path: "/" },
   { name: "Projects", path: "/projects" },
-  { name: "Exp", path: "/experience" },
-  { name: "Blog", path: "/blog" },
-  { name: "Uses", path: "/uses" },
-  { name: "Guestbook", path: "/guestbook" },
+  { name: "Experience", path: "/experience" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
-  { name: "Game", path: "/game" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
   const { setOpen } = useCommandMenu();
-  useKonami();
 
   return (
     <motion.header 

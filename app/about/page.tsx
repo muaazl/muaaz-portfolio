@@ -70,7 +70,7 @@ export default async function AboutPage() {
           </div>
         </div>
         <div className="md:col-span-3 bg-surface/40 border border-white/5 p-8 rounded-3xl">
-          <h3 className="text-white font-bold mb-6">Skill Tree</h3>
+          <h3 className="text-white font-bold mb-6">Technical Skills</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12">
              {skills.map((skill) => (
                <SkillPower key={skill._id} name={skill.name} percent={skill.percent} />
@@ -79,7 +79,7 @@ export default async function AboutPage() {
         </div>
       </div>
       <section className="pt-8">
-        <h3 className="text-xl font-bold text-white mb-6 text-center">Arsenal</h3>
+        <h3 className="text-xl font-bold text-white mb-6 text-center">Tech Stack</h3>
         <TechMarquee />
       </section>
     </main>

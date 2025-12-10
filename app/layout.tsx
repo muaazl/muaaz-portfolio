@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-
-// Components
-import Cursor from "@/components/cursor";
-import ConsoleOverlay from "@/components/console-overlay";
 import CircuitBackground from "@/components/circuit-background";
 import Navbar from "@/components/navbar";
-import { CommandMenu } from "@/components/command-menu";
-import SpotifyFooter from "@/components/spotify-footer";
 import SiteFooter from "@/components/site-footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -20,10 +14,8 @@ export const metadata: Metadata = {
     default: "Muaaz Lattif | Developer",
     template: "%s | Muaaz Lattif"
   },
-  description: "A developer who stays quiet until it's time to activate. Specialized in Next.js, 3D Web, and High-Performance UI.",
   openGraph: {
-    title: "Muaaz Lattif | Creative Developer",
-    description: "Calm by default. Powerful on demand.",
+    title: "Muaaz Lattif | Developer",
     url: 'https://muaaz-portfolio.vercel.app',
     siteName: 'Muaaz Lattif',
     locale: 'en_US',
@@ -54,11 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} ${jetbrains.variable} bg-background text-foreground antialiased selection:bg-accent-1/30 selection:text-white`}>
-        <Cursor />
-        <ConsoleOverlay />
-        <CommandMenu />
         <Navbar />
-        <SpotifyFooter />
         {children}
         <SiteFooter />
         <CircuitBackground />
