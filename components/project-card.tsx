@@ -1,4 +1,3 @@
-// components/ProjectCard.tsx
 "use client";
 import { motion } from "framer-motion";
 import { useSoundEffects } from "@/hooks/use-sound-effects";
