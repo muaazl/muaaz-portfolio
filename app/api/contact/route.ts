@@ -7,7 +7,6 @@ export async function POST(request: Request) {
     await connectDB();
     const body = await request.json();
     
-    // Simple validation
     if (!body.name || !body.email || !body.message) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }

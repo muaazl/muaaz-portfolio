@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { useCommandMenu } from "@/hooks/use-command-menu";
 import { FaSearch } from "react-icons/fa";
 
 const navItems = [
@@ -17,7 +16,6 @@ const navItems = [
 
 export default function Navbar() {
   const pathname = usePathname();
-  const { setOpen } = useCommandMenu();
 
   return (
     <motion.header 
@@ -52,13 +50,6 @@ export default function Navbar() {
             );
           })}
         </nav>
-        <button
-          onClick={() => setOpen(true)}
-          className="p-2 rounded-full border transition-all duration-300 pointer-events-auto flex-shrink-0 bg-black/80 border-accent-1 text-accent-1 shadow-[0_0_10px_rgba(0,225,255,0.3)]"
-          aria-label="Open Command Menu"
-        >
-          <FaSearch className="w-4 h-4" />
-        </button>
       </div>
     </motion.header>
   );

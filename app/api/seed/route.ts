@@ -14,7 +14,6 @@ export async function GET() {
       Skill.deleteMany({})
     ]);
 
-    // 2. SEED EXPERIENCE
     await Experience.create([
       {
         role: "Senior Frontend Engineer",
@@ -34,7 +33,6 @@ export async function GET() {
       }
     ]);
 
-    // 3. SEED SKILLS
     await Skill.create([
       { name: "Frontend (React/Next)", percent: 95, category: "Dev" },
       { name: "Backend (Node/Go)", percent: 85, category: "Dev" },
