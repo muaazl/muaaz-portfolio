@@ -3,7 +3,6 @@ import Image from "next/image";
 import { FaArrowLeft, FaGithub, FaGlobe } from "react-icons/fa";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import KudosButton from "@/components/kudos-button";
 import connectDB from "@/lib/db";
 import Project from "@/lib/models/project";
 
@@ -54,7 +53,6 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                 </Button>
               </a>
             )}
-            <KudosButton slug={project.slug} initialLikes={project.likes || 0} />
           </div>
         </div>
       </div>

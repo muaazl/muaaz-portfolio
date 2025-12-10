@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import connectDB from "@/lib/db";
 import Project from "@/lib/models/project";
-import Bucket from "@/lib/models/bucket";
-import Post from "@/lib/models/post";
 import Experience from "@/lib/models/experience";
 import Skill from "@/lib/models/skill";
 
@@ -12,8 +10,6 @@ export async function GET() {
 
     await Promise.all([
       Project.deleteMany({}),
-      Bucket.deleteMany({}),
-      Post.deleteMany({}),
       Experience.deleteMany({}),
       Skill.deleteMany({})
     ]);
@@ -76,24 +72,6 @@ export async function GET() {
         featured: false
       }
     ]);
-
-    // 3. SEED BUCKET LIST
-    await Bucket.create([
-      { title: "Launch a SaaS Product", status: "in-progress", category: "Dev" },
-      { title: "Visit Japan", status: "not-started", category: "Life" },
-      { title: "Contribute to a major Open Source repo", status: "done", category: "Dev" },
-      { title: "Deadlift 150kg", status: "in-progress", category: "Fitness" },
-      { title: "Learn Rust", status: "not-started", category: "Dev" }
-    ]);
-
-    await Post.create({
-      title: "The Art of Invisible UI",
-      slug: "invisible-ui",
-      excerpt: "Why the best interfaces are the ones you don't notice.",
-      content: "# The Art of Invisible UI\n\nGood design is obvious. Great design is transparent...",
-      tags: ["Design", "Philosophy"],
-      publishedAt: new Date()
-    });
 
     return NextResponse.json({ message: "Database seeded successfully" });
   } catch (error) {
